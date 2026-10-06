@@ -3,8 +3,8 @@ import pandas as pd
 from dateutil.relativedelta import relativedelta
 from utils import ui_helpers
 
-st.set_page_config(page_title="Functional Wise SAP Analysis", layout="wide")
-st.logo("datasets/Hero_Section_Imgaes/logo.jpeg")
+st.set_page_config(page_title="Functional Wise SAP Analysis", page_icon="datasets/Hero_Section_Imgaes/logo.png", layout="wide")
+st.logo("datasets/Hero_Section_Imgaes/logo.png")
 ui_helpers.inject_custom_css()
 ui_helpers.inject_top_right_logo()
 st.title("📊 Functional Wise SAP Analysis")

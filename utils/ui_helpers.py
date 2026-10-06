@@ -232,29 +232,42 @@ def inject_custom_css():
     )
 
 def inject_top_right_logo():
-    """Injects floating corporate bold blue text at top-right of main view."""
+    """Injects floating corporate bold blue badge with logo at top-right of main view."""
+    logo_path = os.path.join(os.getcwd(), "datasets", "Hero_Section_Imgaes", "logo.png")
+    b64_logo = ""
+    if os.path.exists(logo_path):
+        try:
+            with open(logo_path, "rb") as f:
+                b64_logo = base64.b64encode(f.read()).decode("utf-8")
+        except Exception:
+            pass
+    
+    img_tag = f'<img src="data:image/png;base64,{b64_logo}" style="height:34px; width:34px; border-radius:50%; vertical-align:middle; margin-right:10px; box-shadow:0 0 12px rgba(56,189,248,0.6);">' if b64_logo else ""
+    
     st.markdown(
-        """
+        f"""
         <div class="top-right-text">
-            <strong>APEX ENTERPRISE PORTAL</strong>
+            {img_tag}<strong>APEX ENTERPRISE PORTAL</strong>
         </div>
         <style>
-        .top-right-text {
+        .top-right-text {{
             position: fixed;
-            top: 55px;
+            top: 50px;
             right: 40px;
             z-index: 99999;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: #005b8e !important;
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
             pointer-events: none;
-        }
-        @media (max-width: 768px) {
-            .top-right-text {
+        }}
+        @media (max-width: 768px) {{
+            .top-right-text {{
                 display: none;
-            }
-        }
+            }}
+        }}
         </style>
         """,
         unsafe_allow_html=True

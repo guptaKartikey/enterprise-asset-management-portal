@@ -4,9 +4,10 @@ from utils import ui_helpers
 
 st.set_page_config(
     page_title="Enterprise Reports",
+    page_icon="datasets/Hero_Section_Imgaes/logo.png",
     layout="wide"
 )
-st.logo("datasets/Hero_Section_Imgaes/logo.jpeg")
+st.logo("datasets/Hero_Section_Imgaes/logo.png")
 ui_helpers.inject_custom_css()
 ui_helpers.inject_top_right_logo()
 
