@@ -1,66 +1,504 @@
 # 💻 Enterprise Asset & SAP Usage Analysis Portal
 
-A modern, high-performance web dashboard built with **Streamlit**, **Pandas**, and **Python** for comprehensive IT Asset Lifecycle Management, Employee Hardware Tracking, SAP Security Audit (SM20) Analytics, and Terminal Login Anomaly Detection.
+<p align="center">
+
+### 🚀 [🌐 LIVE DEMO](https://enterprise-asset-management-app-hhrbodyqgfaxvhisxujul3.streamlit.app/)
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python" />
+<img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit" />
+<img src="https://img.shields.io/badge/Pandas-Data%20Analytics-purple?style=for-the-badge&logo=pandas" />
+<img src="https://img.shields.io/badge/SAP-SM20%20Analytics-orange?style=for-the-badge&logo=sap" />
+<img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
+
+</p>
 
 ---
 
-## 🌟 Key Features
+## 🌐 Interactive Live Application
 
-1. **Enterprise Asset Dashboard**
-   - Live KPI cards tracking Total Assets, In-Use Devices, IT Stock (spares), and Employee allocations.
-   - Interactive breakdown by Department, Location, and Asset Types (Laptops, Desktops, Servers, Storage).
+Experience the complete dashboard directly in your browser:
 
-2. **Advanced Employee Search & Profile**
-   - Multi-criteria lookup by Employee Name, Employee ID, or Hardware Asset Tag.
-   - Detailed Employee Profile Summary & assigned hardware specifications with serial numbers and warranty statuses.
+<p align="center">
 
-3. **Asset & Inventory Reports**
-   - Multi-facet filters by Department, Asset Type, and Location.
-   - One-click export to clean CSV reports.
+<a href="https://enterprise-asset-management-app-hhrbodyqgfaxvhisxujul3.streamlit.app/">
+<img src="https://img.shields.io/badge/🚀%20OPEN%20LIVE%20DASHBOARD-Streamlit-red?style=for-the-badge&logo=streamlit" />
+</a>
 
-4. **SAP SM20 Usage & Audit Analysis**
-   - Dynamic multi-month SM20 log ingestion and transaction parsing.
-   - Dialog User filtering and reporting manager mapping.
-   - Department-wise drill-downs, login frequency counts, and executed transaction analytics.
+</p>
 
-5. **Functional-Wise SAP Analysis**
-   - Multi-tab authorization matrix tracking Assigned vs. Executed TCodes across enterprise functions.
-
-6. **SAP Login Violation Detection**
-   - Cross-verifies physical hardware allocations against SAP terminal connection logs.
-   - Flags suspicious logins where users access SAP from unassigned workstations or after hours.
+> **Note:** The live application uses anonymized/mock data for demonstration and portfolio purposes.
 
 ---
 
-## 📁 Sample / Mock Datasets
+## 📌 Overview
 
-A clean, anonymized sample dataset is included in `datasets/Sample_Mock_Datasets/` for demo and testing purposes:
+**Enterprise Asset & SAP Usage Analysis Portal** is an interactive enterprise analytics application built with **Python, Streamlit, and Pandas**.
 
-- `mock_asset_data.csv` / `mock_asset_data.xlsx` (16 realistic asset rows with Laptops, Desktops, Servers, IT Stock)
-- `mock_sap_users.xlsx` (Master SAP User List with Dialog and System users)
-- `mock_sap_access.xlsx` (SAP Role and TCode access matrix)
-- `mock_sm20_audit_log.xlsx` (Multi-month SM20 transaction and logon logs)
-- `mock_login_audit_report.xlsx` (Terminal login records with violation test cases)
+The platform combines:
+
+- 🖥️ IT Asset Lifecycle Management
+- 👨‍💼 Employee Hardware Tracking
+- 📊 SAP SM20 Security Audit Analytics
+- 🔐 SAP T-Code Usage Analysis
+- ⚠️ Terminal Login Violation Detection
+- 📈 Interactive Enterprise Dashboards
+- 📥 CSV Reporting & Data Export
+
+The goal is to provide a centralized platform for analyzing **IT assets, employee allocations, SAP usage, transaction activity, and login anomalies**.
 
 ---
 
-## 🚀 Quick Start Guide
+# 🧭 Dashboard Navigation
 
-### 1. Prerequisites
-- Python 3.9+ installed
+| Module | Description |
+|---|---|
+| 🏠 Enterprise Dashboard | Overall IT asset KPIs and analytics |
+| 👤 Employee Search | Search employees and assigned hardware |
+| 💻 Asset Management | Track assets and inventory |
+| 📊 Asset Reports | Generate filtered asset reports |
+| 🔐 SAP Usage Analysis | Analyze SAP SM20 audit activity |
+| 🧩 Functional SAP Analysis | Compare assigned vs executed T-Codes |
+| ⚠️ Login Violation Detection | Detect suspicious terminal access |
 
-### 2. Install Dependencies
+---
+
+# 🌟 Key Features
+
+## 🏢 1. Enterprise Asset Dashboard
+
+Interactive dashboard for monitoring enterprise IT assets.
+
+### KPIs
+
+- 📦 Total Assets
+- 💻 In-Use Devices
+- 🏢 IT Stock / Spare Devices
+- 👨‍💼 Employee Allocations
+
+### Interactive Analysis
+
+Users can analyze assets by:
+
+- Department
+- Location
+- Asset Type
+- Allocation Status
+
+Supported asset categories include:
+
+```text
+Laptops
+Desktops
+Servers
+Storage
+IT Stock
+```
+
+---
+
+## 👤 2. Advanced Employee Search
+
+Search employees using multiple identifiers:
+
+```text
+Employee Name
+Employee ID
+Hardware Asset Tag
+```
+
+The employee profile provides:
+
+- Employee information
+- Department
+- Assigned hardware
+- Asset Tag
+- Serial Number
+- Warranty status
+- Allocation details
+
+---
+
+## 💻 3. Asset & Inventory Management
+
+Interactive filtering enables users to analyze enterprise hardware.
+
+### Filters
+
+```text
+Department
+Asset Type
+Location
+Allocation Status
+```
+
+### Reporting
+
+Filtered results can be exported as:
+
+```text
+CSV
+```
+
+This makes the application useful for operational reporting and inventory audits.
+
+---
+
+# 🔐 4. SAP SM20 Usage & Audit Analysis
+
+The portal provides interactive analytics for SAP Security Audit Logs (**SM20**).
+
+### Capabilities
+
+- Multi-month audit log analysis
+- Transaction parsing
+- Dialog user filtering
+- Reporting manager mapping
+- Department-wise analysis
+- Login frequency analysis
+- T-Code execution analysis
+- User activity monitoring
+
+---
+
+# 🧩 5. Functional-Wise SAP Analysis
+
+An interactive authorization matrix compares:
+
+```text
+Assigned T-Codes
+        VS
+Executed T-Codes
+```
+
+This helps identify:
+
+- Assigned but unused T-Codes
+- Executed transactions
+- Functional usage patterns
+- Department-wise activity
+
+---
+
+# ⚠️ 6. SAP Login Violation Detection
+
+The application cross-verifies:
+
+```text
+Employee Hardware Allocation
+              +
+SAP Terminal Login Logs
+              ↓
+       Anomaly Detection
+```
+
+It can flag scenarios such as:
+
+- 🚨 Login from an unassigned workstation
+- 🚨 Unexpected terminal access
+- 🚨 After-hours login activity
+- 🚨 Potential credential-sharing indicators
+
+> This module is designed as an analytics and anomaly-detection aid, not as a definitive security incident determination.
+
+---
+
+# 📊 Interactive Analytics
+
+The dashboard supports interactive exploration through:
+
+- 🔎 Search
+- 🎛️ Filters
+- 📈 Charts
+- 📋 Data Tables
+- 📊 KPI Cards
+- 📥 CSV Export
+- 🧩 Drill-down analysis
+
+Users can change filters and immediately explore different subsets of the data.
+
+---
+
+# 📁 Sample / Mock Dataset
+
+For public demonstration, the repository contains anonymized sample datasets:
+
+```text
+datasets/
+└── Sample_Mock_Datasets/
+    ├── mock_asset_data.csv
+    ├── mock_asset_data.xlsx
+    ├── mock_sap_users.xlsx
+    ├── mock_sap_access.xlsx
+    ├── mock_sm20_audit_log.xlsx
+    └── mock_login_audit_report.xlsx
+```
+
+### Dataset Contents
+
+| Dataset | Purpose |
+|---|---|
+| `mock_asset_data` | Employee assets and inventory |
+| `mock_sap_users` | SAP user master data |
+| `mock_sap_access` | SAP role & T-Code access |
+| `mock_sm20_audit_log` | SAP SM20 activity logs |
+| `mock_login_audit_report` | Terminal login anomaly cases |
+
+---
+
+# 🏗️ Application Architecture
+
+```text
+                 ┌─────────────────────┐
+                 │     User / Admin    │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │  Streamlit Web App  │
+                 └──────────┬──────────┘
+                            │
+             ┌──────────────┼──────────────┐
+             │              │              │
+             ▼              ▼              ▼
+       Asset Data       SAP SM20       SAP Access
+             │              │              │
+             └──────────────┼──────────────┘
+                            ▼
+                    ┌───────────────┐
+                    │    Pandas     │
+                    │ Data Processing│
+                    └───────┬───────┘
+                            │
+                            ▼
+                  ┌──────────────────┐
+                  │ Interactive      │
+                  │ Dashboards       │
+                  └──────────────────┘
+```
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology | Usage |
+|---|---|
+| 🐍 Python | Application & data processing |
+| 🎈 Streamlit | Interactive web dashboard |
+| 🐼 Pandas | Data processing & analysis |
+| 📊 Data Visualization | Interactive analytics |
+| 🔐 SAP SM20 | Security audit data |
+| 📄 CSV / Excel | Data ingestion & reporting |
+
+---
+
+# 🚀 Quick Start
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/enterprise-asset-management-portal.git
+```
+
+```bash
+cd enterprise-asset-management-portal
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the Application
+---
+
+## 3️⃣ Run Application
+
 ```bash
 streamlit run app.py
 ```
-Or double-click `start_app.bat` on Windows.
+
+Or on Windows:
+
+```text
+start_app.bat
+```
 
 ---
 
-## 🛡️ Privacy & Sanitization Notice
-All company names, employee personal details (names, emails, phone numbers), and confidential audit logs in this repository are replaced with generic identifiers (Apex Enterprise, John Doe, EMP001, etc.) to ensure privacy and compliance with public repository standards.
+## 4️⃣ Open in Browser
+
+```text
+http://localhost:8501
+```
+
+---
+
+# 🖥️ Recommended System
+
+```text
+Python 3.9+
+4 GB RAM or higher
+Modern Web Browser
+Internet connection for live deployment
+```
+
+---
+
+# 🔒 Privacy & Data Sanitization
+
+This repository **does not contain real confidential enterprise data**.
+
+For public demonstration:
+
+- Employee names are anonymized
+- Employee IDs are replaced
+- Company names are replaced with generic identifiers
+- Email addresses are removed
+- Phone numbers are removed
+- SAP audit records are mocked/anonymized
+- Terminal information is sanitized
+
+Example:
+
+```text
+Apex Enterprise
+John Doe
+EMP001
+```
+
+> ⚠️ Real employee information, SAP credentials, confidential logs, internal hostnames, IP addresses, or company-sensitive data should never be committed to a public repository.
+
+---
+
+# 📸 Screenshots
+
+Add your dashboard screenshots here.
+
+Example:
+
+```markdown
+![Enterprise Dashboard](assets/screenshots/enterprise-dashboard.png)
+
+![SAP Usage Dashboard](assets/screenshots/sap-usage-dashboard.png)
+
+![Login Violation Dashboard](assets/screenshots/login-violation-dashboard.png)
+```
+
+Recommended folder:
+
+```text
+assets/
+└── screenshots/
+    ├── enterprise-dashboard.png
+    ├── employee-search.png
+    ├── asset-management.png
+    ├── sap-usage-dashboard.png
+    └── login-violation-dashboard.png
+```
+
+---
+
+# 🎯 Project Highlights
+
+### 📦 Enterprise Asset Management
+
+Centralized monitoring of employee hardware and IT inventory.
+
+### 📊 SAP Analytics
+
+Interactive analysis of SAP SM20 audit logs and transaction usage.
+
+### 🔐 Security Analytics
+
+Detection of potentially abnormal SAP terminal access.
+
+### 📈 Data-Driven Reporting
+
+Interactive filters, dashboards and CSV exports for operational analysis.
+
+---
+
+# 💡 Use Cases
+
+This platform can support:
+
+- IT Asset Audits
+- Employee Hardware Tracking
+- Inventory Monitoring
+- SAP Usage Analysis
+- T-Code Utilization Analysis
+- Security Audit Analytics
+- Terminal Access Monitoring
+- Department-Level Reporting
+- Operational Dashboards
+
+---
+
+# 🔮 Future Enhancements
+
+Potential future improvements:
+
+- 🤖 AI-powered anomaly detection
+- 📧 Automated email reports
+- 🗄️ PostgreSQL / MySQL integration
+- 🔐 Role-based authentication
+- 📊 Advanced BI dashboards
+- 📅 Scheduled reports
+- 🚨 Real-time security alerts
+- ☁️ Enterprise cloud deployment
+
+---
+
+# 👨‍💻 Developer
+
+### Kartikey Gupta
+
+**B.Tech Computer Science & Engineering**
+
+Interested in:
+
+```text
+Data Analytics
+AI/ML
+Python
+Software Development
+Business Intelligence
+```
+
+### 🔗 Connect
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/kartikey-gupta-988206372/)
+- 🐙 [GitHub](https://github.com/)
+- 🌐 [Portfolio](https://kartikey-gupta-portfolio.streamlit.app/)
+
+---
+
+# ⭐ Support the Project
+
+If you find this project useful or interesting:
+
+⭐ **Star this repository**
+
+🍴 **Fork the repository**
+
+💬 **Share your feedback**
+
+---
+
+<p align="center">
+
+### 🚀 Built with Python + Streamlit + Pandas
+
+**Enterprise Asset & SAP Usage Analysis Portal**
+
+</p>
+
+<p align="center">
+© 2026 Kartikey Gupta
+</p>
