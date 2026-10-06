@@ -279,10 +279,13 @@ def get_hero_carousel_html():
     if not os.path.exists(pic_dir):
         return "<!-- Hero images folder not found -->"
     
-    # Get all jpeg/jpg/png files, excluding logo
+    # Get only banner images (img1, img2, etc.), strictly excluding any logo/favicon
     image_files = [
         f for f in os.listdir(pic_dir)
-        if f.lower().endswith((".png", ".jpg", ".jpeg")) and "logo" not in f.lower()
+        if f.lower().endswith((".png", ".jpg", ".jpeg"))
+        and f.lower().startswith("img")
+        and "logo" not in f.lower()
+        and "favicon" not in f.lower()
     ]
     if not image_files:
         return "<!-- No carousel images found -->"
