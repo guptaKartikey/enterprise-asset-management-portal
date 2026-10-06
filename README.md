@@ -376,21 +376,7 @@ EMP001
 
 ---
 
-# 📸 Screenshots
 
-Add your dashboard screenshots here.
-
-Example:
-
-```markdown
-<img width="1857" height="793" alt="image" src="https://github.com/user-attachments/assets/65b33ad3-4b6a-4883-ab3c-9d694e435385" />
-
-
-<img width="1874" height="809" alt="image" src="https://github.com/user-attachments/assets/0bca440a-c73d-4f8b-9435-bfe89840c014" />
-
-![Uploading image.png…]()
-
-```
 
 Recommended folder:
 
